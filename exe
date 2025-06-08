@@ -1,8 +1,7 @@
 
-
-local hiv = Instance.new("ScreenGui")
-hiv.Name = "AppllonV69"
-hiv.Parent = game.CoreGui
+local gui = Instance.new("ScreenGui")
+gui.Name = "AppllonV69"
+gui.Parent = game.CoreGui
 
 --///patrick gui maker///--
 
@@ -18,7 +17,7 @@ f.BorderSizePixel = 1
 f.Active = true
 f.BackgroundTransparency = 0.7
 f.Draggable = true
-f.Parent = hiv
+f.Parent = gui
 
 
 local name = Instance.new("TextLabel")
@@ -73,13 +72,13 @@ local op = Instance.new("ImageButton")
 op.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 op.BorderColor3 = Color3.fromRGB(0, 0, 0)
 op.BorderSizePixel = 0
-op.Position = UDim2.new(0, 0, 0.0695410296, 0)
-op.Size = UDim2.new(0, 46, 0, 45)
+op.Position = UDim2.new(0.25, 0, 0.0695410296, 0)
+op.Size = UDim2.new(0, 50, 0, 49)
 op.Image = "rbxassetid://12053823591"
 op.Active = true
 op.Selectable = true
 op.Draggable = true
-op.Parent = hiv
+op.Parent = gui
 op.MouseButton1Click:Connect(function()
 	if f.Visible == false then
 		f.Visible = true
