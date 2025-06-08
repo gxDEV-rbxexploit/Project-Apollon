@@ -81,7 +81,7 @@ exe.Font = Enum.Font.Legacy
 exe.Parent = f
 exe.TextSize = 16
 exe.MouseButton1Click:Connect(function()
-	loadstring(box.Text)()
+loadstring(box.Text)()
 end)
 
 local cor = Instance.new("UICorner")
