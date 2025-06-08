@@ -1,0 +1,151 @@
+
+
+local hiv = Instance.new("ScreenGui")
+hiv.Name = "AppllonV69"
+hiv.Parent = game.CoreGui
+
+--///patrick gui maker///--
+
+
+-- put your mainframe into the screengui that I have made (frame.Parent = gui) 
+
+local f = Instance.new("Frame")
+f.Size = UDim2.new(0.5, 0, 0.7, 0)
+f.Position = UDim2.new(0.25, 0, 0.2, 0)
+f.BackgroundColor3 = Color3.new(0, 0, 0)
+f.BorderColor3 = Color3.new(0, 0, 0)
+f.BorderSizePixel = 1
+f.Active = true
+f.BackgroundTransparency = 0.7
+f.Draggable = true
+f.Parent = hiv
+
+
+local name = Instance.new("TextLabel")
+name.Size = UDim2.new(1, 0, 0.05, 0)
+name.Position = UDim2.new(0, 0, 0, 0)
+name.BackgroundColor3 = Color3.new(0, 0, 0)
+name.BorderColor3 = Color3.new(0, 0, 0)
+name.BorderSizePixel = 1
+name.Text = "Apollon executor"
+name.BackgroundTransparency = 1
+name.TextColor3 = Color3.new(255, 255, 255)
+name.Font = Enum.Font.Legacy
+name.Parent = f
+name.TextSize = 12
+
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 20)
+UICorner.Parent = f
+
+
+local stroke = Instance.new("UIStroke")
+stroke.Color = Color3.new(1, 0, 1)
+stroke.Thickness = 2
+stroke.Parent = f
+
+
+local sf = Instance.new("ScrollingFrame")
+sf.Size = UDim2.new(1, 0, 0.75, 0)
+sf.Position = UDim2.new(0, 0, 0.07, 0)
+sf.BackgroundColor3 = Color3.new(1, 1, 1)
+sf.BorderColor3 = Color3.new(0, 0, 0)
+sf.BorderSizePixel = 0
+sf.Parent = f
+sf.BackgroundTransparency = 1
+sf.ScrollBarThickness = 1
+
+local box = Instance.new("TextBox")
+box.Size = UDim2.new(1, 0, 1, 0)
+box.Position = UDim2.new(0, 0, 0, 0)
+box.BackgroundColor3 = Color3.new(0, 0, 0)
+box.BorderColor3 = Color3.new(0, 0, 0)
+box.BorderSizePixel = 0
+box.Text = "---Apollon executor---"
+box.TextColor3 = Color3.new(0, 255, 0)
+box.BackgroundTransparency = 1
+box.Font = Enum.Font.Code
+box.TextSize = 10
+box.Parent = sf
+
+
+local op = Instance.new("ImageButton")
+op.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+op.BorderColor3 = Color3.fromRGB(0, 0, 0)
+op.BorderSizePixel = 0
+op.Position = UDim2.new(0, 0, 0.0695410296, 0)
+op.Size = UDim2.new(0, 46, 0, 45)
+op.Image = "rbxassetid://12053823591"
+op.Active = true
+op.Selectable = true
+op.Draggable = true
+op.Parent = hiv
+op.MouseButton1Click:Connect(function()
+	if f.Visible == false then
+		f.Visible = true
+	else
+		f.Visible = false
+	end
+end)
+
+
+
+local exe = Instance.new("TextButton")
+exe.Size = UDim2.new(0.2, 0, 0.17, 0)
+exe.Position = UDim2.new(0, 0, 0.83, 0)
+exe.BackgroundColor3 = Color3.new(0, 0, 0)
+exe.BorderColor3 = Color3.new(0, 0, 1)
+exe.BorderSizePixel = 1
+exe.Text = "Execute"
+exe.BackgroundTransparency = 0 
+exe.TextColor3 = Color3.new(255, 0, 255)
+exe.Font = Enum.Font.Legacy
+exe.Parent = f
+exe.TextSize = 16
+exe.MouseButton1Click:Connect(function()
+	loadstring(box.Text)()
+end)
+
+local cor1 = Instance.new("UICorner")
+cor1.CornerRadius = UDim.new(0, 20)
+cor1.Parent = exe
+
+
+local cl = Instance.new("TextButton")
+cl.Size = UDim2.new(0.2, 0, 0.17, 0)
+cl.Position = UDim2.new(0.24, 0, 0.83, 0)
+cl.BackgroundColor3 = Color3.new(0, 0, 0)
+cl.BorderColor3 = Color3.new(0, 0, 0)
+cl.BorderSizePixel = 1
+cl.Text = "Clear"
+cl.BackgroundTransparency = 0 
+cl.TextColor3 = Color3.new(255, 0, 255)
+cl.Font = Enum.Font.Legacy
+cl.Parent = f
+cl.TextSize = 16
+cl.MouseButton1Click:Connect(function()
+	box.Text = ""
+end)
+
+local cor2 = Instance.new("UICorner")
+cor2.CornerRadius = UDim.new(0, 20)
+cor2.Parent = cl
+
+---to toggle the gui or not---
+f.Visible = false
+op.Visible = true
+
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "Notice";
+ Text = "This executor is still in development | using the fluxus api";
+ Duration = 15;
+})
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "Notice2";
+ Text = "You still have to do the key system | I recommend using a bypasser";
+ Duration = 7;
+})
