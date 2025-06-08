@@ -1,0 +1,11 @@
+
+local Players = game:GetService("Players") 
+
+local Fluxus = gethui():FindFirstChild("FluxusAndroidUI")
+
+getgenv().Cache = Cache
+
+if Fluxus and not Cache then
+	Cache = true
+    Fluxus.Enabled = false
+end
