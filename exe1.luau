@@ -129,7 +129,8 @@ blue.BackgroundTransparency = 0
 blue.TextColor3 = Color3.new(255, 255, 255)
 blue.Font = Enum.Font.Code
 blue.Parent = sf
-
+blue.MouseButton1Click:Connect(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/gxDEV-rbxexploit/Rbx-Blue-hub-open-source-/refs/heads/main/Blue%20hub%20v0.1.lua",true))()
+end)
 
 local inf = Instance.new("TextButton")
 inf.Size = UDim2.new(0.95, 0, 0.05, 0)
@@ -142,7 +143,9 @@ inf.BackgroundTransparency = 0
 inf.TextColor3 = Color3.new(255, 255, 255)
 inf.Font = Enum.Font.Code
 inf.Parent = sf
-
+inf.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
 
 local dex = Instance.new("TextButton")
 dex.Size = UDim2.new(0.95, 0, 0.05, 0)
@@ -155,7 +158,9 @@ dex.BackgroundTransparency = 0
 dex.TextColor3 = Color3.new(255, 255, 255)
 dex.Font = Enum.Font.Code
 dex.Parent = sf
-
+dex.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+end)
 
 local sca = Instance.new("TextButton")
 sca.Size = UDim2.new(0.95, 0, 0.05, 0)
@@ -163,11 +168,15 @@ sca.Position = UDim2.new(0.5, 0, 0.5, 0)
 sca.BackgroundColor3 = Color3.new(0, 0, 0)
 sca.BorderColor3 = Color3.new(1, 0, 1)
 sca.BorderSizePixel = 1
-sca.Text = "Team Scam FE gui"
+sca.Text = "B-tools"
 sca.BackgroundTransparency = 0 
 sca.TextColor3 = Color3.new(255, 255, 255)
 sca.Font = Enum.Font.Code
 sca.Parent = sf
+sca.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+end)
+
 
 local op = Instance.new("ImageButton")
 op.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
