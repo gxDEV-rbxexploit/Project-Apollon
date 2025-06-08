@@ -80,6 +80,9 @@ exe.TextColor3 = Color3.new(255, 0, 255)
 exe.Font = Enum.Font.Legacy
 exe.Parent = f
 exe.TextSize = 16
+exe.MouseButton1Click:Connect(function()
+	loadstring(box.Text)()
+end)
 
 local cor = Instance.new("UICorner")
 cor.CornerRadius = UDim.new(0, 25)
@@ -98,6 +101,9 @@ cl.TextColor3 = Color3.new(255, 0, 255)
 cl.Font = Enum.Font.Legacy
 cl.Parent = f
 cl.TextSize = 16
+cl.MouseButton1Click:Connect(function()
+	box.Text = ""
+end)
 
 local cor1 = Instance.new("UICorner")
 cor1.CornerRadius = UDim.new(0, 25)
@@ -163,4 +169,21 @@ sca.TextColor3 = Color3.new(255, 255, 255)
 sca.Font = Enum.Font.Code
 sca.Parent = sf
 
-
+local op = Instance.new("ImageButton")
+op.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+op.BorderColor3 = Color3.fromRGB(0, 0, 0)
+op.BorderSizePixel = 0
+op.Position = UDim2.new(.5, 0, 0.0695410296, 0)
+op.Size = UDim2.new(0, 46, 0, 45)
+op.Image = "rbxassetid://12053823591"
+op.Active = true
+op.Selectable = true
+op.Draggable = true
+op.Parent = gui
+op.MouseButton1Click:Connect(function()
+	if f.Visible == false then
+		f.Visible = true
+	else
+		f.Visible = false
+	end
+end)
